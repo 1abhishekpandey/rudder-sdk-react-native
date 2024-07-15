@@ -17,7 +17,7 @@ yarn add @rudderstack/rudder-sdk-react-native
 ```
 
 2. For Android: Make sure you have added `mavenCentral()` as a repository in your project level `build.gradle` file, as shown below:
-
+//
 ```
 buildscript {
     repositories {
