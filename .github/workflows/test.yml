@@ -29,7 +29,8 @@ jobs:
       - name: Setup CocoaPods
         uses: maxim-lobanov/setup-cocoapods@v1
         with:
-          version: latest
+          # version: latest
+          podfile-path: apps/example/ios/Podfile.lock
 
       - name: Setup Node
         uses: actions/setup-node@v4
