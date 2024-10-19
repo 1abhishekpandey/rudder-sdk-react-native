@@ -116,23 +116,6 @@ async function setup(
   });
 }
 
-// wrapper for `track` method
-async function track(
-  event: string,
-  properties: Record<string, unknown> | null = null,
-  options: Record<string, unknown> | null = null,
-) {
-  if (event == undefined) {
-    logWarn("track: Mandatory field 'event' missing");
-    return;
-  }
-  if (typeof event != 'string') {
-    logWarn("track: 'event' must be a string");
-    return;
-  }
-  bridge.track(event, filterNaN(properties), filterNaN(options));
-}
-
 // wrapper for `screen` method
 async function screen(
   name: string,
