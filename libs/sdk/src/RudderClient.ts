@@ -133,23 +133,6 @@ async function track(
   bridge.track(event, filterNaN(properties), filterNaN(options));
 }
 
-// wrapper for `screen` method
-async function screen(
-  name: string,
-  properties: Record<string, unknown> | null = null,
-  options: Record<string, unknown> | null = null,
-) {
-  if (name == undefined) {
-    logWarn("screen: Mandatory field 'name' missing");
-    return;
-  }
-  if (typeof name != 'string') {
-    logWarn("screen: 'name' must be a string");
-    return;
-  }
-  bridge.screen(name, filterNaN(properties), filterNaN(options));
-}
-
 // wrapper for `identify` method
 async function identify(
   userId: string,
