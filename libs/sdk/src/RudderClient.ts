@@ -153,7 +153,7 @@ async function identify(
     return;
   }
 
-  let _userId;
+  
   let _traits;
   let _options;
   if (typeof userIdOrTraits == 'string') {
