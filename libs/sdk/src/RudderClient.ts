@@ -191,23 +191,6 @@ async function identify(
   bridge.identify(_userId, filterNaN(_traits), filterNaN(_options));
 }
 
-// wrapper for `group` method
-async function group(
-  groupId: string,
-  traits: Record<string, unknown> | null = null,
-  options: Record<string, unknown> | null = null,
-) {
-  if (groupId == undefined) {
-    logWarn("group: Mandatory field 'groupId' missing");
-    return;
-  }
-  if (typeof groupId != 'string') {
-    logWarn("group: 'groupId' must be a string");
-    return;
-  }
-  bridge.group(groupId, filterNaN(traits), filterNaN(options));
-}
-
 // wrapper for `alias` method
 async function alias(previousId: string, userId: string | Record<string, unknown>): Promise<void>;
 async function alias(newId: string, options: Record<string, unknown> | null | string = null) {
