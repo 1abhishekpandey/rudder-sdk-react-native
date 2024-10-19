@@ -154,7 +154,7 @@ async function identify(
   }
 
   
-  let _traits;
+  let _traits
   let _options;
   if (typeof userIdOrTraits == 'string') {
     // userIdOrTraits contains userId
